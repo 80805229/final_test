@@ -8,4 +8,28 @@ _Написать программу, которая из имеющегося �
     ["1234", "1567", "-2", "computer science"]->["-2"]
     ["Russia", "Denmark", "Kazan"]->[]
 
+**Программный код**
 
+    string[] mass = { "1234", "qwe", ":-))", "-2", "yes", "hello", "Ann" };
+    Console.Write("Исходный массив: ");
+    int a = mass.Length;
+    for (int i = 0; i < a; i++)
+    {
+        Console.Write(mass[i] + "\t");
+    }
+    Console.WriteLine();
+    Console.Write("Результат: ");
+
+    string[] mass2 = new string[a];
+    int i2 = 0;
+
+    for (int i = 0; i < a; i++)
+    {
+        if (mass[i].Length <= 3)
+        {
+            string res = mass[i];
+            mass2[i2] = res;
+    
+            Console.Write(mass2[i2] + "\t");
+        }
+    }
